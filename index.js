@@ -1,6 +1,7 @@
 const { logger } = require('./logger/log4js.config');
 const moment = require('moment');
 
+// calculate age with vanila js
 const calculateAge = date => {
     const dob = new Date(new Date(date).getTime());
     const today = new Date();
@@ -13,6 +14,7 @@ const calculateAge = date => {
     return age;
 };
 
+// calculate age with momentjs
 const calculateAgeWithMoment = date => {
     const dob = moment(new Date(date).getTime());
     const today = moment(new Date());
